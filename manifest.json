@@ -1,0 +1,36 @@
+{
+    "manifest_version": 2,
+
+    "name": "Aliexpress combine and sort total price with shipping",
+    "version": "2",
+    "description": "__MSG_extDescription__",
+    "permissions": ["storage", "https://www.aliexpress.com/*", "https://aliexpress.com/*", "https://www.aliexpress.ru/*","https://aliexpress.ru/*", "https://*.aliexpress.com/*"],
+    "author": "NextNextDev <nextnextdev@gmail.com>",
+    "background": {
+        "scripts": ["background.bundle.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_title": "__MSG_extName__",
+        "default_popup": "start.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.aliexpress.com/*/*", "https://www.aliexpress.ru/*/*", "https://aliexpress.com/*/*", "https://aliexpress.ru/*/*" , "https://*.aliexpress.com/*" ],
+            "run_at": "document_idle",
+            "js": ["content.bundle.js"]
+        },
+        {
+            "matches": ["https://shoppingcart.aliexpress.ru/orders.htm*","https://shoppingcart.aliexpress.com/orders.htm*"],
+            "run_at": "document_idle",
+            "js": ["order.bundle.js"]
+        }
+    ],
+    "default_locale": "en",
+    "icons": {
+        "16": "icons/16.png",
+        "48": "icons/48.png",
+        "128": "icons/128.png"
+    },
+    "web_accessible_resources": ["*.html", "*.png", "*.eot", "*.woff", "*.woff2", "*.ttf", "*.svg", "*.gif"]
+}

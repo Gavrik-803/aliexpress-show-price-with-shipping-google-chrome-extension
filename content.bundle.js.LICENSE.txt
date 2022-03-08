@@ -1,0 +1,3 @@
+/*! For license information please see shifty.js.LICENSE.txt */
+
+//!! 03.12.2021
