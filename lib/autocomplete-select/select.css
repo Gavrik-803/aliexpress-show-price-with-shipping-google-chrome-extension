@@ -1,0 +1,103 @@
+.selector * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.selector.small {
+    width: 50%;
+    display: block;
+}
+.selector input {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 0.25rem 0.5rem;
+    color: #3d4761;
+    border: none;
+    font-size: 13px;
+    font-weight: 500;
+    height: 44px;
+    height: 2rem;
+    background: #f2f3f8;
+    border-radius: 10px;
+    max-width: 100%;
+    appearance: none;
+    outline: none;
+    letter-spacing: 0.0025em;
+    font-family: 'Montserrat', sans-serif;
+    width: 315px;
+}
+.selector input.big {
+    width: 100%;
+}
+.selector input.open {
+    box-shadow: 0px 2px 7px 3px rgb(177 176 207 / 30%);
+    background-color: white;
+}
+.selector input:focus {
+    border-color: #1c95f5;
+    border-width: 2px;
+}
+
+.selector .data-container {
+    display: none;
+    position: absolute;
+    padding: 16px 6px 24px 16px;
+    z-index: 10;
+    background: #ffffff;
+    border-radius: 10px;
+    width: 340px;
+    border: 1px solid #7280a5;
+}
+
+.selector .data {
+    padding-right: 6px;
+    overflow: auto;
+}
+
+.selector .data::-webkit-scrollbar {
+    width: 4px;
+}
+
+.selector .data::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #eeeff4;
+}
+
+.selector .data .option,
+.selector .data .head_option {
+    line-height: 40px;
+    cursor: pointer;
+    padding: 10px 0px 10px 10px;
+}
+
+.selector .data .option:hover {
+    background-color: #e3f2fd;
+    border-radius: 5px;
+}
+
+.selector .data .head_option {
+    font-weight: 700;
+    color: #7280a5;
+    font-size: 13px;
+    line-height: 15.85px;
+}
+
+.selector .data .option {
+    font-weight: 500;
+    color: #060606;
+    font-size: 13px;
+    line-height: 19.5px;
+}
+
+.selector .data .option.selected {
+    background-color: #e3f2fd;
+    border-radius: 5px;
+}
+
+.selector .error {
+    margin-top: 5px;
+    margin-left: 5px;
+    color: red;
+    display: none;
+    position: absolute;
+}
