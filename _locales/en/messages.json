@@ -1,0 +1,13 @@
+{
+    "extName": {
+        "message": "Aliexpress show price with shipping filter",
+        "description": "Extension name."
+    },
+    "extDescription": {
+        "message": "Aliexpress filter extension"
+    },
+    "sortByLocale": { "message": "Sort by price with shipping (10s)" },
+    "preloaderMessage": {
+        "message": "Please don’t touch the mouse and don’t switch the window, we are loading and sorting shipping prices"
+    }
+}
